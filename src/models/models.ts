@@ -11,8 +11,17 @@
 		 rating: number;
 	}
 	export type ParamsType={
-		id:string
+		id:string,
+		page:number,
+		category:number
+
 	}
+	export type IdType={
+		id:string,
+		
+
+	}
+	
 
 
 

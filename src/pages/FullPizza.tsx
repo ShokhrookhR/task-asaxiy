@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { ParamsType } from '../models/models';
+import { IdType } from '../models/models';
 import { useGetOneItemQuery } from '../store/pizza/pizza.api';
 
 const FullPizza = () => {
-  const { id } = useParams<ParamsType>();
+  const { id } = useParams<IdType>();
   const { isError, isLoading, data } = useGetOneItemQuery(id!);
 
   //   useEffect(() => {

@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/dist/query/react';
 import { useDispatch } from 'react-redux';
+import filterPizza from './pizza/filterPizza';
 import { pizzaApi } from './pizza/pizza.api';
 import favouritesSlice from './pizza/pizzaSlice';
 
 export const store = configureStore({
   reducer: {
     [pizzaApi.reducerPath]:pizzaApi.reducer,
-    favourites:favouritesSlice
+    favourites:favouritesSlice,
+    filter:filterPizza
   },
   middleware:getDefaultMiddleWare=>getDefaultMiddleWare().concat(pizzaApi.middleware)
 });

@@ -4,8 +4,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useAppDispatch } from '../store';
-import { addItem, removeItem, favouritesSelector } from '../store/pizza/pizzaSlice';
-import { useSelector } from 'react-redux';
+import { addItem, removeItem } from '../store/pizza/pizzaSlice';
 const PizzaCard = ({ item }: { item: IPizza }) => {
   const [isOutlined, setOutlined] = React.useState(true);
   const dispatch = useAppDispatch();
